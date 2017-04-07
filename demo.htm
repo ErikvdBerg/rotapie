@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Erik van den Berg">
+    <title>Rotapie demo</title>
+    <style>
+        body{text-align:center} 
+    </style>
+</head>
+<body> 
+    <h1>Rotapie demo</h1>
+    <p>View the source code and/or visit <a href="http://www.net-developer.nl/rotapie">http://www.net-developer.nl/rotapie</a> for more information.</p> 
+    <div id="pie"></div> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="jquery.rotapie.js"></script>
+    <script>
+        $(function(){
+            $('#pie').rotapie({
+                slices: [
+                    { color: '#006673', percentage: 10 }, // If color not set, slice will be transparant.
+                    { color: '#0294a8', percentage: 30 }, // Font color to render percentage defaults to 'color' but can be overriden by setting 'fontColor'.
+                    { color: '#77ccd1', percentage: 60 }
+                ],
+                sliceIndex: 0, // Start index selected slice.
+                deltaAngle: 0.2, // The rotation angle in radians between frames, smaller number equals slower animation.
+                minRadius: 100, // Radius of unselected slices, can be set to percentage of container width i.e. '50%'
+                maxRadius: 110, // Radius of selected slice, can be set to percentage of container width i.e. '45%'
+                minInnerRadius: 55, // Smallest radius inner circle when animated, set to 0 to disable inner circle, can be set to percentage of container width i.e. '35%'
+                maxInnerRadius: 65, // Normal radius inner circle, set to 0 to disable inner circle, can be set to percentage of container width i.e. '30%'
+                innerColor: '#fff', // Background color inner circle. 
+                minFontSize: 30, // Smallest fontsize percentage when animated, set to 0 to disable percentage display, can be set to percentage of container width i.e. '20%'
+                maxFontSize: 40, // Normal fontsize percentage, set to 0 to disable percentage display, can be set to percentage of container width i.e. '10%'
+                fontYOffset: 0, // Vertically offset the percentage display with this value, can be set to percentage of container width i.e. '-10%'
+                fontFamily: 'Times New Roman', // FontFamily percentage display.
+                fontWeight: 'bold', // FontWeight percentage display.
+                decimalPoint: '.', // Can be set to comma or other symbol.
+                clickable: true // If set to true a user can select a different slice by clicking on it. 
+                /*
+                beforeAnimate: function (nextIndex, settings) {
+                    var canvas = this;
+                    return false; // Cancel rotation
+                },
+                afterAnimate: function(settings){
+                    var canvas = this;
+                    var index = settings.sliceIndex; // Retrieve current index.
+                }
+                */
+            });
+        });
+    </script>
+</body>
+</html>
