@@ -1,7 +1,7 @@
 ﻿/*!
  * Copyright (c) 2017 Erik van den Berg (http://www.net-developer.nl/rotapie)
  * Licensed under MIT (http://www.opensource.org/licenses/mit-license.php) license.  
- * Version: 0.1.0
+ * Version: 1.0.0
  * Dependencies: jQuery 1.4.2+
 */
 (function($){

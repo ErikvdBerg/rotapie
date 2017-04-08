@@ -1,6 +1,6 @@
 {
     "name": "rotapie",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "rotapie is a responsive animated jquery pie chart plugin.",
     "main": "jquery.rotapie.js", 
     "repository": {
@@ -10,7 +10,8 @@
     "keywords": [
         "jquery-plugin",
         "ecosystem:jquery",
-        "piechart"
+        "piechart",
+        "pie chart"
     ],
     "author": "Erik van den Berg",
     "license": "MIT",
@@ -19,6 +20,6 @@
     },
     "homepage": "http://www.net-developer.nl/rotapie",
     "dependencies": {
-        "jquery": "1.x"
+        "jquery": ">= 1.4.2"
     }
 }
